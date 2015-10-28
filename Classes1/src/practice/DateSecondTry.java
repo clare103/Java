@@ -1,0 +1,75 @@
+package practice;
+import java.util.*;
+public class DateSecondTry {
+
+	private String month;
+	private int day;
+	private int year;
+	
+	public void writeOutput()
+	{
+		System.out.println(month+" "+day+", "+ year);
+	}
+	public void readInput()
+	{
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("Enter month, day, and year.");
+		System.out.println("Do not use a comma.");
+		month = keyboard.next();
+		day = keyboard.nextInt();
+		year = keyboard.nextInt();
+	}
+	public int getDay()
+	{
+		return day;
+	}
+	public int getYear()
+	{
+		return year;
+	}
+	public int getMonth()
+	{
+		if(month.equalsIgnoreCase("january"))
+			return 1;
+		else if (month.equalsIgnoreCase("February"))
+			return 2;
+		else if(month.equalsIgnoreCase("march"))
+			return 3;
+		else if(month.equalsIgnoreCase("april"))
+			return 4;
+		else if(month.equalsIgnoreCase("May"))
+			return 5;
+		else if(month.equalsIgnoreCase("june"))
+			return 6;
+		else if(month.equalsIgnoreCase("july"))
+			return 7;
+		else if(month.equalsIgnoreCase("August"))
+			return 8;
+		else if(month.equalsIgnoreCase("September"))
+			return 9;
+		else if(month.equalsIgnoreCase("october"))
+			return 10;
+		else if(month.equalsIgnoreCase("november"))
+			return 11;
+		else if(month.equalsIgnoreCase("December"))
+			return 12;
+		else
+		{
+			System.out.println("Fatal Error");
+			System.exit(0);
+			return 0;
+		}
+	}
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		DateSecondTry date = new DateSecondTry();
+		date.readInput();
+		int dayNumber = date.getDay();
+		System.out.println("That is the "+ dayNumber+"th day of the month.");
+
+	}
+
+}

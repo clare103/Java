@@ -1,0 +1,3 @@
+Blah.
+Hello again1 from System.err.
+[Ljava.io.File;@86c347
